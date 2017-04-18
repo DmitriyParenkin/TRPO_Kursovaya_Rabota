@@ -1,9 +1,11 @@
+#include <Windows.h>
+#include <conio.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
-void instriction(){
-     printf("\nThe rules of the game: \n");
+void Instruction() {
+printf("\nThe rules of the game: \n");
 printf("-the game is played between 2 players in front of which a pile of 100 matches;\n");
 printf("-players take turns taking from the pile a certain number of matches;\n");
 printf("-the number of matches taken per turn must be more than 1 and less than 11;\n");
@@ -94,6 +96,75 @@ int PlayerComputerHard(){
   if (Player==1)
     printf("You won!");
   else printf("You lose!");
+}
+
+
+int menu() {
+    int xv=0,c;
+    while(xv != 4){ 
+             
+printf("Пожалуйста, выберите нужную вам цифру\n 1: Игра человек-человек;\n 2: Игра человек-компьютер;\n 3: Правила игры;\n 4: Выход\n"); 
+scanf(" %d",&xv); 
+
+switch(xv){ 
+case 1: 
+PlayerComputerEasy();
+printf("\nЕсли хотите продолжить игру, нажмите 1, если хотите выйти, нажмите 0\n");
+scanf("%d",&xv);
+if (xv==0){
+                //nothing to do 
+printf("До встречи, возвращайся - ещё поиграем!!! \n"); 
+Sleep(500);
+break;}
+if (xv==1){
+                menu();}
+case 2:  
+printf("Please choose complexity\n 1: Easy;\n 2: Hard;\n 3: Come back\n");
+scanf(" %d",&xv);
+if (xv==1){
+                PlayerComputerEasy();
+                printf("\nЕсли хотите продолжить игру, нажмите 1, если хотите выйти, нажмите 0\n");
+                scanf("%d",&xv);
+                if (xv==0){
+                          //nothing to do 
+                          printf("До встречи, возвращайся - ещё поиграем!!! \n"); 
+                          Sleep(500);
+                          }
+                          break;
+                if (xv==1){
+                          menu();}
+                          }
+if (xv==2){
+                PlayerComputerHard();
+                printf("\nЕсли хотите продолжить игру, нажмите 1, если хотите выйти, нажмите 0\n");
+                scanf("%d",&xv);
+                if (xv==0){
+                          //nothing to do 
+                          printf("До встречи, возвращайся - ещё поиграем!!! \n"); 
+                          Sleep(500);
+                          }
+                          break;
+                if (xv==1){
+                          menu();}
+                }
+if (xv==3){
+                menu();
+                }
+break;
+case 3:
+     Instruction();
+     printf("После того, как ознакомитесь со всеми правилами игры, нажмите любую клавишу.\n");
+     scanf("%d",&c);
+     return menu();
+case 4: 
+//nothing to do 
+printf("До встречи, возвращайся - ещё поиграем!!! \n"); 
+Sleep(500); 
+break; 
+default: 
+printf("\nУказан недопустимый номер \n\n"); 
+break; } 
+}
 }
 
 int main()
