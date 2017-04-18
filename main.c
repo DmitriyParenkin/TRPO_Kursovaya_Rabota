@@ -136,7 +136,7 @@ if (xv==1){
                           }
                           break;
                 if (xv==1){
-                          menu();}
+                          return menu();}
                           }
 if (xv==2){
                 PlayerComputerHard();
@@ -150,16 +150,16 @@ if (xv==2){
                           }
                           break;
                 if (xv==1){
-                          menu();}
+                         return menu();}
                 }
 if (xv==3){
-                menu();
+                return menu();
                 }
 break;
 case 3:
      Instruction();
      printf("После того, как ознакомитесь со всеми правилами игры, нажмите любую клавишу.\n");
-     scanf("%d",&c);
+     _getch();
      return menu();
 case 4: 
 //nothing to do 
@@ -178,7 +178,7 @@ main()
         setlocale(0, "");
 printf("\n\t\t\tWelcome to the game 100 matches!!!\n");
 printf("Для запуска игры нажмите любую клавишу.\n");
-scanf("%d",&c);
+_getch();
 menu();
 return 0;
 }
