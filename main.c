@@ -14,6 +14,8 @@ printf("-the one who takes the last match from the pile loses;\n");
 printf("\n\t\t\tGood game for you!!!\n\n");
 }
 
+int main();
+
 int Count,Num,Player;
 bool Correct;
 int PlayerComputerEasy(){
@@ -115,6 +117,7 @@ if (xv==0){
                 //nothing to do 
 printf("До встречи, возвращайся - ещё поиграем!!! \n"); 
 Sleep(500);
+xv=4;
 break;}
 if (xv==1){
                 menu();}
@@ -129,6 +132,7 @@ if (xv==1){
                           //nothing to do 
                           printf("До встречи, возвращайся - ещё поиграем!!! \n"); 
                           Sleep(500);
+                          xv=4;
                           }
                           break;
                 if (xv==1){
@@ -142,6 +146,7 @@ if (xv==2){
                           //nothing to do 
                           printf("До встречи, возвращайся - ещё поиграем!!! \n"); 
                           Sleep(500);
+                          xv=4;
                           }
                           break;
                 if (xv==1){
@@ -167,10 +172,13 @@ break; }
 }
 }
 
-int main()
+main()
 {
+      int c;
+        setlocale(0, "");
 printf("\n\t\t\tWelcome to the game 100 matches!!!\n");
-
-system("PAUSE");
+printf("Для запуска игры нажмите любую клавишу.\n");
+scanf("%d",&c);
+menu();
 return 0;
 }
