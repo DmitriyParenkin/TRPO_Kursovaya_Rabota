@@ -42,6 +42,7 @@ int PlayerComputerEasy(){
        Num=rand()%10+1;
       if (Num>Count)
         Num=Count;
+        system("cls");
       printf("My move. I took %d matches.\n",Num);}
         while (!Correct);   
     }
@@ -83,6 +84,7 @@ int PlayerComputerHard(){
         Num=11-Num;
       if (Num>Count)
         Num=Count;
+        system("cls");
       printf("My move. I took %d matches.\n",Num);}
         while (!Correct);   
     }
@@ -103,19 +105,19 @@ int menu() {
     int xv=0,c;
     while(xv != 4){ 
              
-printf("Пожалуйста, выберите нужную вам цифру\n 1: Игра человек-человек;\n 2: Игра человек-компьютер;\n 3: Правила игры;\n 4: Выход\n"); 
+printf("Please select your desired number\n 1: The game is a player-player;\n 2: The game is a player-computer;\n 3: The rules of the game;\n 4: Exit\n"); 
 scanf(" %d",&xv);
 system("cls");
 
 switch(xv){ 
 case 1: 
 PlayerComputerEasy();
-printf("\nЕсли хотите продолжить игру, нажмите 1, если хотите выйти, нажмите 0\n");
+printf("\nIf you want to continue the game, press %d else if you want to exit press %d\n",1,0);
 scanf("%d",&xv);
 system("cls");
 if (xv==0){
                 //nothing to do 
-printf("До встречи, возвращайся - ещё поиграем!!! \n"); 
+printf("Before meeting\n Come back - still play!!! \n"); 
 Sleep(500);
 xv=4;
 break;}
@@ -127,12 +129,12 @@ scanf(" %d",&xv);
 system("cls");
 if (xv==1){
                 PlayerComputerEasy();
-                printf("\nЕсли хотите продолжить игру, нажмите 1, если хотите выйти, нажмите 0\n");
+                printf("\nIf you want to continue the game, press %d else if you want to exit press %d\n",1,0);
                 scanf("%d",&xv);
                 system("cls");
                 if (xv==0){
                           //nothing to do 
-                          printf("До встречи, возвращайся - ещё поиграем!!! \n"); 
+                          printf("Before meeting\n Come back - still play!!! \n"); 
                           Sleep(500);
                           xv=4;
                           }
@@ -142,12 +144,12 @@ if (xv==1){
                           }
 if (xv==2){
                 PlayerComputerHard();
-                printf("\nЕсли хотите продолжить игру, нажмите 1, если хотите выйти, нажмите 0\n");
+                printf("\nIf you want to continue the game, press %d else if you want to exit press %d\n",1,0);
                 scanf("%d",&xv);
                 system("cls");
                 if (xv==0){
                           //nothing to do 
-                          printf("До встречи, возвращайся - ещё поиграем!!! \n"); 
+                          printf("Before meeting\n Come back - still play!!! \n"); 
                           Sleep(500);
                           xv=4;
                           }
@@ -161,17 +163,17 @@ if (xv==3){
 break;
 case 3:
      Instruction();
-     printf("После того, как ознакомитесь со всеми правилами игры, нажмите любую клавишу.\n");
+     printf("After you become familiar with all the rules of the game, press any key...\n");
      _getch();
      system("cls");
      return menu();
 case 4: 
 //nothing to do 
-printf("До встречи, возвращайся - ещё поиграем!!! \n"); 
+printf("Before meeting\n Come back - still play!!! \n"); 
 Sleep(500); 
 break; 
 default: 
-printf("\nУказан недопустимый номер \n\n"); 
+printf("\nThe specified number is invalid \n\n"); 
 break; } 
 }
 }
@@ -179,9 +181,8 @@ break; }
 int main()
 {
       int c;
-        setlocale(0, "");
 printf("\n\t\t\tWelcome to the game 100 matches!!!\n");
-printf("Для запуска игры нажмите любую клавишу.\n");
+printf("To start the game, press any key.\n");
 _getch();
 system("cls");
 menu();
