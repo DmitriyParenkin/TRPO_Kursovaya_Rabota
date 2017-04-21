@@ -1,3 +1,4 @@
+#include "game.h"
 #include <Windows.h>
 #include <conio.h>
 #include <stdio.h>
