@@ -14,8 +14,6 @@ printf("-the one who takes the last match from the pile loses;\n");
 printf("\n\t\t\tGood game for you!!!\n\n");
 }
 
-int main();
-
 int Count,Num,Player;
 bool Correct;
 int PlayerComputerEasy(){
@@ -106,13 +104,15 @@ int menu() {
     while(xv != 4){ 
              
 printf("Пожалуйста, выберите нужную вам цифру\n 1: Игра человек-человек;\n 2: Игра человек-компьютер;\n 3: Правила игры;\n 4: Выход\n"); 
-scanf(" %d",&xv); 
+scanf(" %d",&xv);
+system("cls");
 
 switch(xv){ 
 case 1: 
 PlayerComputerEasy();
 printf("\nЕсли хотите продолжить игру, нажмите 1, если хотите выйти, нажмите 0\n");
 scanf("%d",&xv);
+system("cls");
 if (xv==0){
                 //nothing to do 
 printf("До встречи, возвращайся - ещё поиграем!!! \n"); 
@@ -124,10 +124,12 @@ if (xv==1){
 case 2:  
 printf("Please choose complexity\n 1: Easy;\n 2: Hard;\n 3: Come back\n");
 scanf(" %d",&xv);
+system("cls");
 if (xv==1){
                 PlayerComputerEasy();
                 printf("\nЕсли хотите продолжить игру, нажмите 1, если хотите выйти, нажмите 0\n");
                 scanf("%d",&xv);
+                system("cls");
                 if (xv==0){
                           //nothing to do 
                           printf("До встречи, возвращайся - ещё поиграем!!! \n"); 
@@ -142,6 +144,7 @@ if (xv==2){
                 PlayerComputerHard();
                 printf("\nЕсли хотите продолжить игру, нажмите 1, если хотите выйти, нажмите 0\n");
                 scanf("%d",&xv);
+                system("cls");
                 if (xv==0){
                           //nothing to do 
                           printf("До встречи, возвращайся - ещё поиграем!!! \n"); 
@@ -160,6 +163,7 @@ case 3:
      Instruction();
      printf("После того, как ознакомитесь со всеми правилами игры, нажмите любую клавишу.\n");
      _getch();
+     system("cls");
      return menu();
 case 4: 
 //nothing to do 
@@ -172,13 +176,14 @@ break; }
 }
 }
 
-main()
+int main()
 {
       int c;
         setlocale(0, "");
 printf("\n\t\t\tWelcome to the game 100 matches!!!\n");
 printf("Для запуска игры нажмите любую клавишу.\n");
 _getch();
+system("cls");
 menu();
 return 0;
 }
