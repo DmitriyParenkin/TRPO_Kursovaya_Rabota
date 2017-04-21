@@ -21,4 +21,5 @@ void table_game(){
 }
 int main(){
 	table_game();
+	system("PAUSE");
 }
