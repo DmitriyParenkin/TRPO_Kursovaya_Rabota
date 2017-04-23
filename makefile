@@ -1,16 +1,15 @@
-.PHONY:	all clean
+.PHONY: all clean
 
-all: game clean
-
+all: game clean 	
+ 
 game: mkDir main.o game.o
 	gcc build/main.o build/game.o -o bin/100_matches
-	clean
 
 main.o: src/main.c
 	gcc -Wall -Werror -c src/main.c -o build/main.o
 
 game.o: src/game.c
-	gcc -Wall -Werror -cpp src/game.c -o build/game.o
+	gcc -Wall -Werror -c src/game.c -o build/game.o
 
 clean:
 	rm -rf build/*.o
