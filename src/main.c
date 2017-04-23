@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include "game.cpp"
+#include "game.c"
 
 int main()
 {
