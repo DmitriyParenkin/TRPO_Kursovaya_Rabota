@@ -35,7 +35,7 @@ CTEST(PlayerComputerEasy, take_110_matches)
 	ASSERT_DBL_NEAR(expected, result);
 }
 
-CTEST(PlayerComputerHard(), take_1_match)
+CTEST(PlayerComputerHard, take_1_match)
 {
 	int num=1;	
 	bool result = PlayerComputerHard();
@@ -43,7 +43,7 @@ CTEST(PlayerComputerHard(), take_1_match)
 	ASSERT_DBL_NEAR(expected, result);
 }
 
-CTEST(PlayerComputerHard(), take_10_matches)
+CTEST(PlayerComputerHard, take_10_matches)
 {
 	int num=10;
 	bool result = PlayerComputerHard();
@@ -51,7 +51,7 @@ CTEST(PlayerComputerHard(), take_10_matches)
 	ASSERT_DBL_NEAR(expected, result);
 }
 
-CTEST(PlayerComputerHard(), take_11_matches)
+CTEST(PlayerComputerHard, take_11_matches)
 {
 	int num=11;
 	bool result = PlayerComputerHard();
@@ -59,7 +59,7 @@ CTEST(PlayerComputerHard(), take_11_matches)
 	ASSERT_DBL_NEAR(expected, result);
 }
 
-CTEST(PlayerComputerHard(), take_110_matches)
+CTEST(PlayerComputerHard, take_110_matches)
 {
 	int num=110;
 	bool result = PlayerComputerHard();
