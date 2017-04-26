@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-
+#include "onegame.h" 
 int Count, Num,Player;
 bool Correct;
 int PlayHuman() {
