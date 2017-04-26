@@ -19,7 +19,3 @@ void table_game(){
 	printf("\t|4.|               Exit from the game.               | \n");
 	printf("\t|__|_________________________________________________|\n");
 }
-int main(){
-	table_game();
-	system("PAUSE");
-}
