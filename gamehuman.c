@@ -6,6 +6,7 @@ int Count, Num,Player;
 bool Correct;
 int PlayHuman() {
 Player=1;
+Count=100;
 do {  
 if (Player == 1) {
 do {
