@@ -44,8 +44,3 @@ do {
     printf("Won Player1!");
   else printf("Won Player2!");	
   }
-int main() {
-PlayHuman();
-system("PAUSE"); 
-return 0;
-}
