@@ -1,6 +1,6 @@
 .PHONY: all clean
 
-all: game clean 	
+all: game	
  
 game: mkDir main.o game.o
 	gcc build/main.o build/game.o -o bin/100_matches

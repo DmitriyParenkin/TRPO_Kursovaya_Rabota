@@ -17,7 +17,7 @@ printf("\n\t\t\tGood game for you!!!\n\n");
 
 int Count,Num,Player;
 bool Correct;
-void PlayerComputerEasy(){
+int PlayerComputerEasy(){
       Player=1;
   Count=100;
   do{
@@ -57,9 +57,10 @@ void PlayerComputerEasy(){
   if (Player==1)
     printf("You won!");
   else printf("You lose!");
+return Correct;
 }
 
-void PlayerComputerHard(){
+int PlayerComputerHard(){
       Player=1;
   Count=100;
   do{
@@ -99,6 +100,7 @@ void PlayerComputerHard(){
   if (Player==1)
     printf("You won!");
   else printf("You lose!");
+return Correct;
 }
 
 

@@ -2,8 +2,8 @@
 #define GAME_H
 
 void Instruction();
-void PlayerComputerEasy();
-void PlayerComputerHard();
+int PlayerComputerEasy();
+int PlayerComputerHard();
 void menu();
 
 #endif
