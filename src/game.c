@@ -15,6 +15,8 @@ printf("-the one who takes the last match from the pile loses;\n");
 printf("\n\t\t\tGood game for you!!!\n\n");
 }
 
+
+
 int Count,Num,Player;
 bool Correct;
 int PlayerComputerEasy(){
@@ -26,38 +28,24 @@ int PlayerComputerEasy(){
     do{
         printf("Your move. There are %d matches on the table.\n",Count);
         printf("How many matches do you take?\n");
-        scanf(" %d", &Num);
-        if(Num>=1&&Num<=10&&Num<=Count)
-            Correct=true;
-        else
-        {
-            printf("Wrong! Please try again!\n");
-            Correct=false;
-        } 
+        Input();
+	if (Correct=false)  printf("Wrong! Please try again!\n");
     }
     while (!Correct);
    }
     else
     {
     do{
-       Num=rand()%10+1;
-      if (Num>Count)
-        Num=Count;
+        Output1();
         system("cls");
-      printf("My move. I took %d matches.\n",Num);}
+        printf("My move. I took %d matches.\n",Num);}
         while (!Correct);   
     }
     Count-=Num;
-    if (Player==1) 
-        Player=2;
-    else 
-        Player=1;
+    Transition();
     }
   while (Count>0);
-  if (Player==1)
-    printf("You won!");
-  else printf("You lose!");
-return Correct;
+  Victory();
 }
 
 int PlayerComputerHard(){
@@ -69,13 +57,8 @@ int PlayerComputerHard(){
     do{
         printf("Your move. There are %d matches on the table.\n",Count);
         printf("How many matches do you take?\n");
-        scanf(" %d", &Num);
-        if(Num>=1&&Num<=10&&Num<=Count)
-            Correct=true;
-        else
-        {
-            printf("Wrong! Please try again!\n");
-            Correct=false;
+        Input();
+	if (Correct=false)  printf("Wrong! Please try again!\n");
         } 
     }
     while (!Correct);
@@ -83,28 +66,20 @@ int PlayerComputerHard(){
     else
     {
     do{
-        Num=11-Num;
-      if (Num>Count)
-        Num=Count;
+        Output2();
         system("cls");
       printf("My move. I took %d matches.\n",Num);}
         while (!Correct);   
     }
     Count-=Num;
-    if (Player==1) 
-        Player=2;
-    else 
-        Player=1;
+    Transition();
     }
   while (Count>0);
-  if (Player==1)
-    printf("You won!");
-  else printf("You lose!");
-return Correct;
+  Victory();
 }
 
 
-void menu() {
+void Menu() {
     int xv=0;
     while(xv != 4){ 
              

@@ -4,6 +4,10 @@
 void Instruction();
 int PlayerComputerEasy();
 int PlayerComputerHard();
-void menu();
+void Menu();
+int Input();
+int Output();
+int Transition();
+void Victory();
 
 #endif
