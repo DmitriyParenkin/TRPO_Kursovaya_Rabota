@@ -5,6 +5,54 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+int Count,Num,Player,Correct;
+
+
+int Input(int Num, int Count) {
+
+        if((Num>=1) && (Num<=10) && (Num<=Count))
+            Correct=1;
+        else
+            Correct=0;
+return Correct;
+}
+
+int Output1(Num,Count) {
+  
+  Num=rand()%10+1;
+  int N=Num;
+if (Num>Count)
+        Num=Count;
+else
+      Num=N;
+return Num;
+}
+
+int Transition(){
+   
+    if (Player==1) 
+        Player=2;
+    else 
+        Player=1;
+    return Player;
+}
+
+void Victory(){
+
+  if (Player==1)
+    printf("You won!");
+  else printf("You lose!");
+}
+
+int Output2(Num,Count) {
+  
+    Num=11-Num;
+   if (Num>Count)
+     Num=Count;
+   return Num;
+}
+
+
 void Instruction() {
 printf("\nThe rules of the game: \n");
 printf("-the game is played between 2 players in front of which a pile of 100 matches;\n");
@@ -15,12 +63,8 @@ printf("-the one who takes the last match from the pile loses;\n");
 printf("\n\t\t\tGood game for you!!!\n\n");
 }
 
-
-
-int Count,Num,Player;
-bool Correct;
-int PlayerComputerEasy(){
-      Player=1;
+void PlayerComputerEasy(){
+  Player=1;
   Count=100;
   do{
   
@@ -28,28 +72,29 @@ int PlayerComputerEasy(){
     do{
         printf("Your move. There are %d matches on the table.\n",Count);
         printf("How many matches do you take?\n");
-        Input();
-	if (Correct=false)  printf("Wrong! Please try again!\n");
+        scanf(" %d", &Num);
+        Input(Num,Count);
+	if (Correct==0) printf("Wrong! Please try again!\n");
     }
-    while (!Correct);
+    while (Correct!=1);
    }
     else
     {
     do{
-        Output1();
+        Output1(Num,Count);
         system("cls");
         printf("My move. I took %d matches.\n",Num);}
-        while (!Correct);   
+        while (Correct!=1);   
     }
     Count-=Num;
-    Transition();
+    Transition(Player);
     }
   while (Count>0);
   Victory();
 }
 
-int PlayerComputerHard(){
-      Player=1;
+void PlayerComputerHard(){
+  Player=1;
   Count=100;
   do{
   
@@ -57,22 +102,23 @@ int PlayerComputerHard(){
     do{
         printf("Your move. There are %d matches on the table.\n",Count);
         printf("How many matches do you take?\n");
-        Input();
-	if (Correct=false)  printf("Wrong! Please try again!\n");
-        } 
-    }
-    while (!Correct);
+        scanf(" %d", &Num);
+        Input(Num,Count);
+	if (Correct==0)  printf("Wrong! Please try again!\n");
+      }
+    while (Correct!=1);
    }
     else
     {
     do{
-        Output2();
+        Output2(Num,Count);
         system("cls");
-      printf("My move. I took %d matches.\n",Num);}
-        while (!Correct);   
+        printf("My move. I took %d matches.\n",Num);
+        }
+        while (Correct!=1);   
     }
     Count-=Num;
-    Transition();
+    Transition(Player);
     }
   while (Count>0);
   Victory();
@@ -100,7 +146,7 @@ Sleep(500);
 xv=4;
 break;}
 if (xv==1){
-                menu();}
+                return Menu();}
 case 2:  
 printf("Please choose complexity\n 1: Easy;\n 2: Hard;\n 3: Come back\n");
 scanf(" %d",&xv);
@@ -118,7 +164,7 @@ if (xv==1){
                           }
                           break;
                 if (xv==1){
-                          return menu();}
+                          return Menu();}
                           }
 if (xv==2){
                 PlayerComputerHard();
@@ -133,10 +179,10 @@ if (xv==2){
                           }
                           break;
                 if (xv==1){
-                         return menu();}
+                         return Menu();}
                 }
 if (xv==3){
-                return menu();
+                return Menu();
                 }
 break;
 case 3:
@@ -144,7 +190,7 @@ case 3:
      printf("After you become familiar with all the rules of the game, press any key...\n");
      _getch();
      system("cls");
-     return menu();
+     return Menu();
 case 4: 
 //nothing to do 
 printf("Before meeting\n Come back - still play!!! \n"); 

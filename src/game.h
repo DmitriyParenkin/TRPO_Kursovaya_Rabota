@@ -2,12 +2,13 @@
 #define GAME_H
 
 void Instruction();
-int PlayerComputerEasy();
-int PlayerComputerHard();
+void PlayerComputerEasy();
+void PlayerComputerHard();
 void Menu();
-int Input();
-int Output();
-int Transition();
-void Victory();
+int Input(int Num, int Count);
+int Output1(int Num, int Count);
+int Output2(int Num, int Count);
+int Transition(int Player);
+void Victory(int Player);
 
 #endif

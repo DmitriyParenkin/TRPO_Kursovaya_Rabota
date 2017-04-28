@@ -11,6 +11,6 @@ printf("\n\t\t\tWelcome to the game 100 matches!!!\n");
 printf("To start the game, press any key.\n");
 _getch();
 system("cls");
-menu();
+Menu();
 return 0;
 }
