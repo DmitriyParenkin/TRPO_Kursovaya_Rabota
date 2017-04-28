@@ -28,7 +28,7 @@ else
 return Num;
 }
 
-int Transition(){
+int Transition(Player){
    
     if (Player==1) 
         Player=2;
@@ -37,7 +37,7 @@ int Transition(){
     return Player;
 }
 
-void Victory(){
+void Victory(Player){
 
   if (Player==1)
     printf("You won!");
@@ -90,7 +90,7 @@ void PlayerComputerEasy(){
     Transition(Player);
     }
   while (Count>0);
-  Victory();
+  Victory(Player);
 }
 
 void PlayerComputerHard(){
@@ -121,7 +121,7 @@ void PlayerComputerHard(){
     Transition(Player);
     }
   while (Count>0);
-  Victory();
+  Victory(Player);
 }
 
 
