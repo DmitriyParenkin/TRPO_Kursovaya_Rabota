@@ -24,14 +24,14 @@ int Transition() {
 
 void Victory() {
     if (Player == 2)
-       printf("Won Player1!");
-    else printf("Won Player2!");	
+       printf("Won Player2!");
+    else printf("Won Player1!");	
   }
 
 
 void PlayHuman() {
-  Player=1;
-  Count=100;
+  Player = 1;
+  Count = 100;
   do {  
      if (Player == 1) {
      do {

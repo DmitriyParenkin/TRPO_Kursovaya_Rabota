@@ -7,6 +7,6 @@
 
 int main()
 {
-table_game();
+PlayHuman();
 return 0;
 }
