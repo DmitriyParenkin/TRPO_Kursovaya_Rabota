@@ -6,9 +6,9 @@ void PlayerComputerEasy();
 void PlayerComputerHard();
 void Menu();
 int Input(int Num, int Count);
-int Output1(int Num, int Count);
-int Output2(int Num, int Count);
-int Transition(int Player);
-void Victory(int Player);
+int Output1();
+int Output2();
+int Transition();
+void Victory();
 
 #endif

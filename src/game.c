@@ -17,7 +17,7 @@ int Input(int Num, int Count) {
 return Correct;
 }
 
-int Output1(Num,Count) {
+int Output1() {
   
   Num=rand()%10+1;
   int N=Num;
@@ -28,7 +28,7 @@ else
 return Num;
 }
 
-int Transition(Player){
+int Transition(){
    
     if (Player==1) 
         Player=2;
@@ -37,14 +37,14 @@ int Transition(Player){
     return Player;
 }
 
-void Victory(Player){
+void Victory(){
 
   if (Player==1)
     printf("You won!");
   else printf("You lose!");
 }
 
-int Output2(Num,Count) {
+int Output2() {
   
     Num=11-Num;
    if (Num>Count)
@@ -81,16 +81,16 @@ void PlayerComputerEasy(){
     else
     {
     do{
-        Output1(Num,Count);
+        Output1();
         system("cls");
         printf("My move. I took %d matches.\n",Num);}
         while (Correct!=1);   
     }
     Count-=Num;
-    Transition(Player);
+    Transition();
     }
   while (Count>0);
-  Victory(Player);
+  Victory();
 }
 
 void PlayerComputerHard(){
@@ -111,17 +111,17 @@ void PlayerComputerHard(){
     else
     {
     do{
-        Output2(Num,Count);
+        Output2();
         system("cls");
         printf("My move. I took %d matches.\n",Num);
         }
         while (Correct!=1);   
     }
     Count-=Num;
-    Transition(Player);
+    Transition();
     }
   while (Count>0);
-  Victory(Player);
+  Victory();
 }
 
 
