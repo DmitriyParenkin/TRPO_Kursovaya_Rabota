@@ -41,7 +41,7 @@ void PlayHuman() {
        Input(Num,Count);
        if (Correct == 0) printf("Wrong! Please try again!\n");
      } 
-     while (Correct != 0);
+     while (!Correct);
    }
      else 
      {
@@ -52,7 +52,7 @@ void PlayHuman() {
        Input(Num,Count);
        if (Correct == 0) printf("Wrong! Please try again!\n");
      } 
-     while (Correct != 0);   
+     while (!Correct);   
     }
     Count = Count - Num;
     Transition();
