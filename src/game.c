@@ -30,7 +30,7 @@ int Transition()
     return Player;
 }
 
-void Victory()
+int Victory()
 {
     if (Player==1) printf("You won!");
     else printf("You lose!");

@@ -9,6 +9,6 @@ int Input(int Num, int Count);
 int Output1();
 int Output2();
 int Transition();
-void Victory();
+int Victory();
 
 #endif
