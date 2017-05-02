@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <conio.h>
-#include "onegame.h" 
+#include "game.h" 
 
 int Count, Num, Player, Correct;
 
