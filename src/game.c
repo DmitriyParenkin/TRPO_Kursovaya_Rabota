@@ -114,16 +114,69 @@ void PlayerComputerHard()
     Victory();
 }
 
+void PlayHuman()
+{
+    Player = 1;
+    Count = 100;
+    do{  
+       if (Player == 1){
+                        do{
+                           printf("Move Player1. There are %d matches on the table.\n", Count);
+                           printf("How many matches do you take?\n");
+                           scanf("%d",&Num);
+                           Input(Num,Count);
+                           if (Correct == 0) printf("Wrong! Please try again!\n");
+                           } 
+                        while (!Correct);
+                        }
+       else{
+            do{		
+               printf("Move Player2. There are %d matches on the table.\n", Count);
+               printf("How many matches do you take?\n");
+               scanf("%d",&Num);
+               Input(Num,Count);
+               if (Correct == 0) printf("Wrong! Please try again!\n");
+               } 
+            while (!Correct);   
+            }
+       Count = Count - Num;
+       Transition();
+       }
+    while (Count > 0);
+    Victory();
+}
+
+void table_game()
+{
+    printf("\t ____________________________________________________ \n");
+    printf("\t|                                                    | \n");
+	printf("\t|                        Menu                        |\n");
+	printf("\t|____________________________________________________| \n");
+	printf("\t|  |                                                 | \n");
+	printf("\t|1.|      Start game mode: player1 vs player2.       | \n");
+	printf("\t|__|_________________________________________________|\n");
+	printf("\t|  |                                                 | \n");
+	printf("\t|2.|       Start game mode: human vs computer.       | \n");
+	printf("\t|__|_________________________________________________|\n");
+	printf("\t|  |                                                 | \n");
+	printf("\t|3.|                  Instruction.                   | \n");
+	printf("\t|__|_________________________________________________|\n");
+    printf("\t|  |                                                 | \n");
+	printf("\t|4.|               Exit from the game.               | \n");
+	printf("\t|__|_________________________________________________|\n");
+}
+
 void Menu() 
 {
     int xv = 0;
     while (xv != 4){ 
-                   printf("Please select your desired number\n 1: The game is a player-player;\n 2: The game is a player-computer;\n 3: The rules of the game;\n 4: Exit\n"); 
+                   table_game();
+                   //printf("Please select your desired number\n 1: The game is a player-player;\n 2: The game is a player-computer;\n 3: The rules of the game;\n 4: Exit\n"); 
                    scanf(" %d",&xv);
                    system("cls");
                    switch (xv){ 
                                case 1: 
-                                      PlayerComputerEasy();
+                                      PlayHuman();
                                       printf("\nIf you want to continue the game, press %d else if you want to exit press %d\n",1,0);
                                       scanf("%d",&xv);
                                       system("cls");

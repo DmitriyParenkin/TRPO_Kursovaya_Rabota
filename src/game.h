@@ -10,5 +10,8 @@ int Output1();
 int Output2();
 int Transition();
 int Victory();
+void PlayHuman();
+void game_table(); 
 
 #endif
+
