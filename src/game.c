@@ -1,11 +1,16 @@
 #include "game.h"
-#include <Windows.h>
-#include <conio.h>
+#include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
 int Count,Num,Player,Correct;
+
+void delay(int ms)
+{
+    int c=clock()+ms;
+    while (clock()<c);
+}
 
 int Input(int Num, int Count)
 {
@@ -182,7 +187,8 @@ void Menu()
                                       system("cls");
                                       if (xv == 0){ 
                                                    printf("Before meeting\n Come back - still play!!! \n"); 
-                                                   Sleep(500);
+                                                   delay(500);
+                                                   //Sleep(500);
                                                    xv = 4;
                                                    break;
                                                    }
@@ -198,7 +204,8 @@ void Menu()
                                                    system("cls");
                                                    if (xv == 0){
                                                                 printf("Before meeting\n Come back - still play!!! \n"); 
-                                                                Sleep(500);
+                                                                delay(500);
+                                                                //Sleep(500);
                                                                 xv = 4;
                                                                 }
                                                    break;
@@ -211,7 +218,8 @@ void Menu()
                                                    system("cls");
                                                    if (xv == 0){
                                                                 printf("Before meeting\n Come back - still play!!! \n"); 
-                                                                Sleep(500);
+                                                                delay(500);
+                                                                //Sleep(500);
                                                                 xv = 4;
                                                                 }
                                                    break;
@@ -222,12 +230,14 @@ void Menu()
                                case 3:
                                       Instruction();
                                       printf("After you become familiar with all the rules of the game, press any key...\n");
-                                      _getch();
+                                      getchar();
+                                      //_getch();
                                       system("cls");
                                       return Menu();
                                case 4: 
                                       printf("Before meeting\n Come back - still play!!! \n"); 
-                                      Sleep(500); 
+                                      delay(500);
+                                      //Sleep(500); 
                                       break; 
                                default: 
                                        printf("\nThe specified number is invalid \n\n"); 

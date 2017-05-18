@@ -1,6 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 
+void delay(int ms);
 void Instruction();
 void PlayerComputerEasy();
 void PlayerComputerHard();
