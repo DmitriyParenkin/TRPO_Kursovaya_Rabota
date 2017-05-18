@@ -230,7 +230,8 @@ void Menu()
                                case 3:
                                       Instruction();
                                       printf("After you become familiar with all the rules of the game, press any key...\n");
-                                      _getch();
+                                      getchar();
+                                      //_getch();
                                       system("cls");
                                       return Menu();
                                case 4: 
