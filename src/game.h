@@ -10,7 +10,7 @@ int Input(int Num, int Count);
 int Output1();
 int Output2();
 int Transition();
-int Victory();
+void Victory();
 void PlayHuman();
 void game_table(); 
 

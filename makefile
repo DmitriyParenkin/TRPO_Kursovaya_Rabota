@@ -12,7 +12,7 @@ game.o: src/game.c
 	gcc -Wall -c src/game.c -o build/src/game.o 
 
 clean:
-	rm -rf build/*.o
+	rm -r build
 
 mkDir:
 	mkdir bin

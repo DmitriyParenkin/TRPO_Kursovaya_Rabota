@@ -8,48 +8,49 @@ int Count,Num,Player,Correct;
 
 void delay(int ms)
 {
-    int c=clock()+ms;
-    while (clock()<c);
+    int c = clock() + ms;
+    while (clock() < c);
 }
 
 int Input(int Num, int Count)
 {
-    if((Num>=1) && (Num<=10) && (Num<=Count)) Correct=1;
-    else Correct=0;
+    if((Num >= 1) && (Num <= 10) && (Num <= Count)) Correct = 1;
+    else Correct = 0;
     return Correct;
 }
 
 int Output1() 
 {
-    Num=rand()%10+1;
-    int N=Num;
-    if (Num>Count) Num=Count;
-    else Num=N;
+    Num = rand()%10+1;
+    int N = Num;
+    if (Num > Count) Num = Count;
+    else Num = N;
     return Num;
 }
 
 int Transition()
 {
-    if (Player==1) Player=2;
-    else Player=1;
+    if (Player == 1) Player = 2;
+    else Player = 1;
     return Player;
 }
 
-int Victory()
+void Victory()
 {
-    if (Player==1) printf("You won!");
+    if (Player == 1) printf("You won!");
     else printf("You lose!");
 }
 
 int Output2() 
 {
-    Num=11-Num;
-    if (Num>Count) Num=Count;
+    Num = 11 - Num;
+    if (Num > Count) Num = Count;
     return Num;
 }
 
 void Instruction() 
 {
+    int xv;
     printf("\nThe rules of the game: \n");
     printf("-the game is played between 2 players in front of which a pile of 100 matches;\n");
     printf("-players take turns taking from the pile a certain number of matches;\n");
@@ -57,22 +58,24 @@ void Instruction()
     printf("-the one who makes the penultimate move in the game wins;\n");
     printf("-the one who takes the last match from the pile loses;\n");
     printf("\n\t\t\tGood game for you!!!\n\n");
+    printf("After you become familiar with all the rules of the game, press any key and Enter...\n");
+    scanf(" %d",&xv);
 }
 
 void PlayerComputerEasy()
 {
-    Player=1;
-    Count=100;
+    Player = 1;
+    Count = 100;
     do{
-       if (Player==1){
+       if (Player == 1){
                       do{
                          printf("Your move. There are %d matches on the table.\n",Count);
                          printf("How many matches do you take?\n");
                          scanf(" %d", &Num);
                          Input(Num,Count);
-                         if (Correct==0) printf("Wrong! Please try again!\n");
+                         if (Correct == 0) printf("Wrong! Please try again!\n");
                          }
-                      while (Correct!=1);
+                      while (Correct != 1);
                       }
        else{
             do{
@@ -80,29 +83,29 @@ void PlayerComputerEasy()
                system("cls");
                printf("My move. I took %d matches.\n",Num);
                }
-            while (Correct!=1);   
+            while (Correct != 1);   
             }
        Count-=Num;
        Transition();
        }
-    while (Count>0);
+    while (Count > 0);
     Victory();
 }
 
 void PlayerComputerHard()
 {
-    Player=1;
-    Count=100;
+    Player = 1;
+    Count = 100;
     do{
-       if (Player==1){
+       if (Player == 1){
                       do{
                          printf("Your move. There are %d matches on the table.\n",Count);
                          printf("How many matches do you take?\n");
                          scanf(" %d", &Num);
                          Input(Num,Count);
-	                     if (Correct==0)  printf("Wrong! Please try again!\n");
+	                     if (Correct == 0)  printf("Wrong! Please try again!\n");
                          }
-                      while (Correct!=1);
+                      while (Correct != 1);
                       }
        else{
             do{
@@ -110,12 +113,12 @@ void PlayerComputerHard()
                system("cls");
                printf("My move. I took %d matches.\n",Num);
                }
-            while (Correct!=1);   
+            while (Correct != 1);   
             }
        Count-=Num;
        Transition();
        }
-    while (Count>0);
+    while (Count > 0);
     Victory();
 }
 
@@ -155,20 +158,20 @@ void table_game()
 {
     printf("\t ____________________________________________________ \n");
     printf("\t|                                                    | \n");
-	printf("\t|                        Menu                        |\n");
-	printf("\t|____________________________________________________| \n");
-	printf("\t|  |                                                 | \n");
-	printf("\t|1.|      Start game mode: player1 vs player2.       | \n");
-	printf("\t|__|_________________________________________________|\n");
-	printf("\t|  |                                                 | \n");
-	printf("\t|2.|       Start game mode: human vs computer.       | \n");
-	printf("\t|__|_________________________________________________|\n");
-	printf("\t|  |                                                 | \n");
-	printf("\t|3.|                  Instruction.                   | \n");
-	printf("\t|__|_________________________________________________|\n");
+    printf("\t|                        Menu                        |\n");
+    printf("\t|____________________________________________________| \n");
     printf("\t|  |                                                 | \n");
-	printf("\t|4.|               Exit from the game.               | \n");
-	printf("\t|__|_________________________________________________|\n");
+    printf("\t|1.|      Start game mode: player1 vs player2.       | \n");
+    printf("\t|__|_________________________________________________|\n");
+    printf("\t|  |                                                 | \n");
+    printf("\t|2.|       Start game mode: human vs computer.       | \n");
+    printf("\t|__|_________________________________________________|\n");
+    printf("\t|  |                                                 | \n");
+    printf("\t|3.|                  Instruction.                   | \n");
+    printf("\t|__|_________________________________________________|\n");
+    printf("\t|  |                                                 | \n");
+    printf("\t|4.|               Exit from the game.               | \n");
+    printf("\t|__|_________________________________________________|\n");
 }
 
 void Menu() 
@@ -229,8 +232,6 @@ void Menu()
                                       break;
                                case 3:
                                       Instruction();
-                                      printf("After you become familiar with all the rules of the game, press any key...\n");
-                                      getchar();
                                       //_getch();
                                       system("cls");
                                       return Menu();
