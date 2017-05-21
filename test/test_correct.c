@@ -177,20 +177,3 @@ CTEST(Transition, player_2)
 	const int expected = 1;
 	ASSERT_EQUAL(expected, result);
 }
-/*
-CTEST(Victory, player_1)
-{
-	Player=1;
-	const char* result = Victory();
-	const char* expected = "You won!";
-	ASSERT_STR(expected, result);
-}
-
-CTEST(Victory, player_2)
-{
-	const int Player=2;
-	const char* result = Victory();
-	const char* expected = "You lose!";
-	ASSERT_STR(expected, result);
-}
-*/
