@@ -50,7 +50,6 @@ int Output2()
 
 void Instruction() 
 {
-    int xv;
     printf("\nThe rules of the game: \n");
     printf("-the game is played between 2 players in front of which a pile of 100 matches;\n");
     printf("-players take turns taking from the pile a certain number of matches;\n");
@@ -58,8 +57,6 @@ void Instruction()
     printf("-the one who makes the penultimate move in the game wins;\n");
     printf("-the one who takes the last match from the pile loses;\n");
     printf("\n\t\t\tGood game for you!!!\n\n");
-    printf("After you become familiar with all the rules of the game, press any key and Enter...\n");
-    scanf(" %d",&xv);
 }
 
 void PlayerComputerEasy()
@@ -232,6 +229,9 @@ void Menu()
                                       break;
                                case 3:
                                       Instruction();
+                                      int v;
+                                      printf("After you become familiar with all the rules of the game, press any key and Enter...\n");
+                                      scanf(" %d",&v);    
                                       //_getch();
                                       system("cls");
                                       return Menu();
