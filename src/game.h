@@ -13,12 +13,12 @@ int Transition();
 void Victory();
 void PlayHuman();
 void game_table();
-int First();
-int Second();
-int Third();
-int Fourth();
+void First();
+void Second();
+void Third();
+void Fourth();
 void Choose();
-int Exit();
+void Exit();
  
 #endif
 

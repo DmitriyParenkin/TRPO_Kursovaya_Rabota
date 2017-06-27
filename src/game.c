@@ -171,7 +171,7 @@ void table_game()
     printf("\t|__|_________________________________________________|\n");
 }
 
-int First() 
+void First() 
 {
     PlayHuman();
     printf("\nIf you want to continue the game, press %d else if you want to exit press %d\n",1,0);
@@ -179,7 +179,7 @@ int First()
     system("cls");
 }
 
-int Second()
+void Second()
 {
     printf("Please choose complexity\n 1: Easy;\n 2: Hard;\n 3: Come back\n");
     scanf(" %d",&xv);
@@ -193,14 +193,14 @@ void Choose()
     system("cls");
 }
 
-int Exit()
+void Exit()
 {
     printf("Before meeting\n Come back - still play!!! \n"); 
     delay(500);
     xv = 4;
 }
 
-int Third()
+void Third()
 {
     Instruction();
     int v;
@@ -209,7 +209,7 @@ int Third()
     system("cls");
 }
 
-int Fourth()
+void Fourth()
 {
     printf("Before meeting\n Come back - still play!!! \n"); 
     delay(500);
