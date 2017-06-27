@@ -12,7 +12,13 @@ int Output2();
 int Transition();
 void Victory();
 void PlayHuman();
-void game_table(); 
-
+void game_table();
+int First();
+int Second();
+int Third();
+int Fourth();
+void Choose();
+int Exit();
+ 
 #endif
 
