@@ -104,62 +104,47 @@ CTEST(Output1_test, Count_1)
 
 CTEST(Output2_test, Count_100_Num_1)
 {
-    Num = 1;
+        Num = 1;
 	Count = 100;
 	const int result = Output2();
-	const int expected1 = 1;
-	const int expected2 = 10;
-	ASSERT_INTERVAL(expected1, expected2, result);
+	const int expected = 10;
+	ASSERT_EQUAL(expected, result);
 }
 
 CTEST(Output2_test, Count_10_Num_1)
 {
-    Num = 1;
+        Num = 1;
 	Count = 10;
 	const int result = Output2();
-	const int expected1 = 1;
-	const int expected2 = 10;
-	ASSERT_INTERVAL(expected1, expected2, result);
+	const int expected = 10;
+        ASSERT_EQUAL(expected, result);
 }
 
 CTEST(Output2_test, Count_3_Num_1)
 {
-    Num = 1;
+        Num = 1;
 	Count = 3;
 	const int result = Output2();
-	const int expected1 = 1;
-	const int expected2 = 10;
-	ASSERT_INTERVAL(expected1, expected2, result);
+	const int expected = 3;
+        ASSERT_EQUAL(expected, result);
 }
 
 CTEST(Output2_test, Count_100_Num_10)
 {
-    Num = 10;
+        Num = 10;
 	Count = 100;
 	const int result = Output2();
-	const int expected1 = 1;
-	const int expected2 = 10;
-	ASSERT_INTERVAL(expected1, expected2, result);
+	const int expected = 1;
+        ASSERT_EQUAL(expected, result);
 }
 
 CTEST(Output2_test, Count_10_Num_10)
 {
-    Num = 10;
-	Count = 10;
+        Num = 10;
+ 	Count = 10;
 	const int result = Output2();
-	const int expected1 = 1;
-	const int expected2 = 10;
-	ASSERT_INTERVAL(expected1, expected2, result);
-}
-
-CTEST(Output2_test, Count_3_Num_10)
-{
-    Num = 10;
-	Count = 3;
-	const int result = Output2();
-	const int expected1 = 1;
-	const int expected2 = 10;
-	ASSERT_INTERVAL(expected1, expected2, result);
+	const int expected = 1;
+        ASSERT_EQUAL(expected, result);
 }
 
 CTEST(Transition, player_1)
